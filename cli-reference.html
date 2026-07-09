@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CLI reference · Privateer Docs</title>
+<meta name="description" content="Every pvtr subcommand, its flags, and usage examples.">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{if(localStorage.getItem('pvtr-theme')==='dark'||(!localStorage.getItem('pvtr-theme')&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <button id="menu-btn" class="icon-btn" aria-label="Open navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <a class="brand" href="index.html"><svg class="flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="align-self:center"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 4.5v15Z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-4"/></svg>privateer <span class="docs">/ docs</span></a>
+    <div class="header-search">
+      <button class="search-trigger" data-search-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>Search docs&hellip;</span><kbd>Ctrl K</kbd></button>
+    </div>
+    <nav class="header-tabs"><a href="index.html">Home</a><a href="introduction.html">Getting started</a><a href="cli-reference.html" class="active">Developer reference</a></nav>
+    <div class="header-actions">
+      <button id="theme-btn" class="icon-btn" aria-label="Toggle theme"><svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></button>
+      <a class="icon-btn" href="https://github.com/privateerproj" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 5 3.3 9.3 7.8 10.8.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.3-3.9-1.3-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.5-.3-5.2-1.3-5.2-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3 0 0 1-.3 3.1 1.2a10.9 10.9 0 0 1 5.7 0C18 4.6 19 4.9 19 4.9c.6 1.5.2 2.7.1 3 .8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.2 5.7.4.4.8 1 .8 2.1v3.1c0 .3.2.7.8.5 4.5-1.5 7.8-5.8 7.8-10.8C23.4 5.6 18.3.5 12 .5Z"/></svg></a>
+    </div>
+  </div>
+</header>
+<div class="drawer-backdrop"></div>
+<aside class="drawer"><div class="nav-group"><h4>Getting started</h4><ul><li><a href="introduction.html">Introduction to Privateer</a></li><li><a href="quickstart.html">Quickstart (5 minutes)</a></li><li><a href="installation.html">Installation</a></li><li><a href="first-run.html">Your first validation run</a></li><li><a href="results.html">Understanding results</a></li><li><a href="upgrading.html">Upgrading Privateer</a></li></ul></div><div class="nav-group"><h4>Developer reference</h4><ul><li><a href="cli-reference.html" class="active">CLI reference</a></li><li><a href="configuration.html">Configuration reference</a></li><li><a href="output-schema.html">Output schema</a></li><li><a href="build-a-plugin.html">Build your first plugin</a></li><li><a href="github-actions.html">GitHub Actions integration</a></li><li><a href="plugin-catalog.html">Plugin catalog</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li></ul></div></aside>
+<div class="shell">
+  <aside class="sidebar"><div class="sidebar-scroll"><div class="nav-group"><h4>Getting started</h4><ul><li><a href="introduction.html">Introduction to Privateer</a></li><li><a href="quickstart.html">Quickstart (5 minutes)</a></li><li><a href="installation.html">Installation</a></li><li><a href="first-run.html">Your first validation run</a></li><li><a href="results.html">Understanding results</a></li><li><a href="upgrading.html">Upgrading Privateer</a></li></ul></div><div class="nav-group"><h4>Developer reference</h4><ul><li><a href="cli-reference.html" class="active">CLI reference</a></li><li><a href="configuration.html">Configuration reference</a></li><li><a href="output-schema.html">Output schema</a></li><li><a href="build-a-plugin.html">Build your first plugin</a></li><li><a href="github-actions.html">GitHub Actions integration</a></li><li><a href="plugin-catalog.html">Plugin catalog</a></li><li><a href="troubleshooting.html">Troubleshooting</a></li></ul></div></div></aside>
+  <main class="doc-main">
+    <article class="doc-column">
+      <div class="crumbs">Developer reference<span class="sep">/</span>CLI reference</div>
+      <h1 class="page-title">CLI reference</h1>
+      <p class="page-desc">Every pvtr subcommand, its flags, and usage examples.</p>
+      <div class="prose"><blockquote>
+<p><strong>Note:</strong> The developer reference is for plugin authors, contributors, and engineers integrating Privateer into automated pipelines. It assumes familiarity with Go, gRPC, and CI/CD tooling. For end-user installation and quickstart, see the <a href="quickstart.html">User Guide</a>.</p>
+</blockquote>
+<p>The Privateer CLI is the <code>pvtr</code> binary. Every subcommand accepts the global flags below, plus its own options.</p>
+<h2 id="global-flags">Global flags</h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Short</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--binaries-path</code></td>
+<td><code>-b</code></td>
+<td><code>$HOME/.privateer/bin</code></td>
+<td>Directory where plugin binaries are resolved</td>
+</tr>
+<tr>
+<td><code>--config</code></td>
+<td><code>-c</code></td>
+<td><code>config.yml</code></td>
+<td>Config file path (JSON or YAML)</td>
+</tr>
+<tr>
+<td><code>--loglevel</code></td>
+<td><code>-l</code></td>
+<td><span class="chip error">error</span></td>
+<td>Verbosity: <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warn</code>, <code>error</code>, <code>off</code></td>
+</tr>
+<tr>
+<td><code>--service</code></td>
+<td><code>-s</code></td>
+<td>(all services)</td>
+<td>Run a single named service from the config</td>
+</tr>
+<tr>
+<td><code>--test-suites</code></td>
+<td><code>-t</code></td>
+<td><code>default</code></td>
+<td>Named test suite(s) to execute</td>
+</tr>
+<tr>
+<td><code>--write</code></td>
+<td></td>
+<td><code>true</code></td>
+<td>Write result files to disk</td>
+</tr>
+<tr>
+<td><code>--write-directory</code></td>
+<td><code>-w</code></td>
+<td><code>evaluation_results</code></td>
+<td>Output directory for result files</td>
+</tr>
+<tr>
+<td><code>--silent</code></td>
+<td></td>
+<td><code>false</code></td>
+<td>Suppress all non-essential terminal output</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td><code>-h</code></td>
+<td></td>
+<td>Show help</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pvtr-run">pvtr run</h2>
+<p>Resolves plugins from the binaries path, launches each as a gRPC subprocess, collects results, and writes output. Registers handlers for SIGINT and SIGTERM; an interrupted run exits with a dedicated abort code distinct from a validation failure.</p>
+<pre><code class="language-bash">pvtr run
+pvtr run -c config.yml
+pvtr run -c config.yml -s my-service        # single service
+pvtr run --loglevel debug -w ./results
+</code></pre>
+<h2 id="pvtr-install">pvtr install</h2>
+<p>Downloads a vetted plugin from the Privateer plugin registry and places the binary in the configured binaries path. Takes exactly one argument.</p>
+<pre><code class="language-bash">pvtr install pvtr-github-repo-scanner
+pvtr install pvtr-github-repo-scanner --binaries-path /opt/pvtr-plugins
+</code></pre>
+<p>For plugins not in the registry, place the binary manually and verify with <code>pvtr list -a</code>.</p>
+<h2 id="pvtr-list">pvtr list</h2>
+<p>Reports which plugins are referenced by the current config and whether each is present in the binaries path.</p>
+<pre><code class="language-bash">pvtr list         # only plugins in config
+pvtr list -a      # all binaries in the binaries path
+</code></pre>
+<p>Use <code>pvtr list -a</code> after a manual binary install to confirm Core can discover it before running.</p>
+<h2 id="pvtr-env">pvtr env</h2>
+<p>Prints a full snapshot of the runtime environment. Useful for debugging environment mismatches in CI.</p>
+<pre><code class="language-bash">pvtr env    # also accessible as: pvtr info
+</code></pre>
+<p>Output includes: binary path, config file path and whether it was found, plugins directory, discovered plugin names, version, commit hash, build time, Go version, and OS/architecture.</p>
+<h2 id="pvtr-version">pvtr version</h2>
+<pre><code class="language-bash">pvtr version            # prints version string only, e.g. 0.1.0
+pvtr version --verbose  # adds git commit hash and build timestamp
+</code></pre>
+<p>A version of <code>edge</code> means the binary was built from source without a release tag. Do not use edge builds in production pipelines.</p>
+<h2 id="pvtr-generate-plugin">pvtr generate-plugin</h2>
+<p>Generates a plugin scaffold from a Gemara Layer 2 YAML control catalog. The output is a compilable Go module with placeholder implementations for data collection, evaluation plans, and assessment steps.</p>
+<pre><code class="language-bash">pvtr generate-plugin \
+  --source-path ~/path/to/catalog.yaml \
+  --service-name &quot;MyService&quot; \
+  --organization &quot;my-github-org&quot; \
+  --output-dir my-plugin/
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Short</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--source-path</code></td>
+<td><code>-p</code></td>
+<td></td>
+<td>Path to the Gemara Layer 2 catalog YAML</td>
+</tr>
+<tr>
+<td><code>--service-name</code></td>
+<td><code>-n</code></td>
+<td></td>
+<td>Service name used in generated identifiers</td>
+</tr>
+<tr>
+<td><code>--organization</code></td>
+<td><code>-g</code></td>
+<td></td>
+<td>GitHub organization for the plugin module path</td>
+</tr>
+<tr>
+<td><code>--output-dir</code></td>
+<td><code>-o</code></td>
+<td><code>generated-plugin/</code></td>
+<td>Output directory</td>
+</tr>
+<tr>
+<td><code>--local-templates</code></td>
+<td></td>
+<td></td>
+<td>Use a local templates directory instead of fetching latest</td>
+</tr>
+</tbody>
+</table>
+<p>The generated code will not compile without filling in the TODO placeholders. See <a href="build-a-plugin.html">Build your first plugin</a>.</p>
+<h2 id="pvtr-completion">pvtr completion</h2>
+<p>Generates shell autocompletion scripts.</p>
+<pre><code class="language-bash">pvtr completion bash
+pvtr completion zsh
+pvtr completion fish
+pvtr completion powershell
+pvtr completion --help    # shell-specific install instructions
+</code></pre></div>
+      <a class="edit-link" href="https://github.com/privateerproj" target="_blank" rel="noopener">Edit this page on GitHub &#8599;</a>
+      <div class="prev-next"><a class="prev" href="upgrading.html"><span class="dir">&larr; Previous</span><span class="name">Upgrading Privateer</span></a><a class="next" href="configuration.html"><span class="dir">Next &rarr;</span><span class="name">Configuration reference</span></a></div>
+    </article>
+    <aside class="toc"><div class="toc-inner"><h5>On this page</h5><ul><li><a class="depth-2" href="#global-flags">Global flags</a></li><li><a class="depth-2" href="#pvtr-run">pvtr run</a></li><li><a class="depth-2" href="#pvtr-install">pvtr install</a></li><li><a class="depth-2" href="#pvtr-list">pvtr list</a></li><li><a class="depth-2" href="#pvtr-env">pvtr env</a></li><li><a class="depth-2" href="#pvtr-version">pvtr version</a></li><li><a class="depth-2" href="#pvtr-generate-plugin">pvtr generate-plugin</a></li><li><a class="depth-2" href="#pvtr-completion">pvtr completion</a></li></ul></div></aside>
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>Privateer is an open source validation framework.</span>
+    <nav>
+      <a href="https://github.com/privateerproj" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/privateerproj/releases" target="_blank" rel="noopener">Releases</a>
+      <a href="https://gemara.openssf.org/" target="_blank" rel="noopener">Gemara</a>
+      <a href="https://baseline.openssf.org/" target="_blank" rel="noopener">OSPS Baseline</a>
+    </nav>
+  </div>
+</footer>
+<div class="search-overlay">
+  <div class="search-panel">
+    <input id="search-input" type="text" placeholder="Search the Privateer docs&hellip;" aria-label="Search">
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+<script src="search-index.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
